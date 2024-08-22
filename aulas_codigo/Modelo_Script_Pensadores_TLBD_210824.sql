@@ -66,11 +66,13 @@ select * from frase;
         Aqui vai o exemplo
 
         create table nome_da_tabela ---> Criar tabela
-        create table if not exits nome_da_tabela ---> Criar uma nova tabela, desde que ela não exista
+        create table if not exists nome_da_tabela ---> Criar uma nova tabela, desde que ela não exista
 
-        create table livro (
+        create table if not exists livro (
             isbn varchar(14) primary key not null, ----> informa que minha chave primária será o código ISBN de meu livro, possui 14 caracteres e não pode ser nulo.
-            titulo varchar(300) not null, ---> informa o título de meu livro, é composto por um limite de caracteres e não é nulo
+            titulo varchar(300) not null, ---> informa o título de meu livro, é composto por um limite de caracteres e não é nulo.
             subtitulo varchar(300) null, ---> informa que talvez eu tenha o subtitulo de meu livro, é composto por um limite de caracteres.
+            nome_da_outra_coluna tipo_do_dado(se houver, limite de caracteres) constrantes (nulo, não nulo, padrão),
+            (se houver, informar a chave estrangeira em que campo e que coluna será a referencia da coluna de outra tabela)
         );
 */
