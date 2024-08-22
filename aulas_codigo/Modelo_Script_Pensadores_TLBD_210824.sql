@@ -57,3 +57,20 @@ insert into frase (conteudo, id_autor)
 values ("Não espere por uma crise para descobrir o que é importante em sua vida.", 1);
 
 select * from frase;
+
+/**
+        proximas etapas:
+        1. Criar as tabelas de livro, editora, pseudonimo, livro_tem_editora, livro_tem_autor
+        2. Utilize o modelo feito aqui no laboratório para a criação das colunas, chaves primárias e secundárias vistas na aula e no enunciado.
+
+        Aqui vai o exemplo
+
+        create table nome_da_tabela ---> Criar tabela
+        create table if not exits nome_da_tabela ---> Criar uma nova tabela, desde que ela não exista
+
+        create table livro (
+            isbn varchar(14) primary key not null, ----> informa que minha chave primária será o código ISBN de meu livro, possui 14 caracteres e não pode ser nulo.
+            titulo varchar(300) not null, ---> informa o título de meu livro, é composto por um limite de caracteres e não é nulo
+            subtitulo varchar(300) null, ---> informa que talvez eu tenha o subtitulo de meu livro, é composto por um limite de caracteres.
+        );
+*/
